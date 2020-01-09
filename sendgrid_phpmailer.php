@@ -11,15 +11,15 @@
 function ajg_phpmailer_settings($phpmailer){
 	// Required settings
 	$phpmailer->isSMTP();
-	$phpmailer->SMTPDebug = 0;										// Set to 1 or 2 to debug email issues.
+	$phpmailer->SMTPDebug = 0;					// Set to 1 or 2 to debug email issues.
 	$phpmailer->Host = 'smtp.sendgrid.net';
-	$phpmailer->SMTPAuth = true;									// Force PHPMailer to use Username and Password to authenticate
+	$phpmailer->SMTPAuth = true;					// Force PHPMailer to use Username and Password to authenticate
 	$phpmailer->Port = 465;
 	$phpmailer->Username = 'apikey';
-	$phpmailer->Password = '';										// Enter your SendGrid API key here
+	$phpmailer->Password = '';					// Enter your SendGrid API key here
 
 	// Additional settings
-	$phpmailer->SMTPSecure = "ssl";									// Choose ssl or tls
+	$phpmailer->SMTPSecure = "ssl";					// Choose ssl or tls
 	$phpmailer->From = "user@domain.com";
 	$phpmailer->FromName = "Human-readable Name";
 }
